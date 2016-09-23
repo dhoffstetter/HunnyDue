@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40D1E9A1D94D4840092B62A /* HunnyDueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */; };
 		C43E46701D94C36100671CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E466F1D94C36100671CE6 /* AppDelegate.swift */; };
-		C43E46721D94C36100671CE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E46711D94C36100671CE6 /* ViewController.swift */; };
+		C43E46721D94C36100671CE6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E46711D94C36100671CE6 /* SignInViewController.swift */; };
 		C43E46751D94C36100671CE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43E46731D94C36100671CE6 /* Main.storyboard */; };
 		C43E46781D94C36100671CE6 /* HunnyDue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C43E46761D94C36100671CE6 /* HunnyDue.xcdatamodeld */; };
 		C43E467A1D94C36100671CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43E46791D94C36100671CE6 /* Assets.xcassets */; };
@@ -16,9 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HunnyDueListViewController.swift; sourceTree = "<group>"; };
 		C43E466C1D94C36100671CE6 /* HunnyDue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HunnyDue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43E466F1D94C36100671CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C43E46711D94C36100671CE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C43E46711D94C36100671CE6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C43E46741D94C36100671CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C43E46771D94C36100671CE6 /* HunnyDue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HunnyDue.xcdatamodel; sourceTree = "<group>"; };
 		C43E46791D94C36100671CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,15 +58,24 @@
 		C43E466E1D94C36100671CE6 /* HunnyDue */ = {
 			isa = PBXGroup;
 			children = (
+				C43E46861D94C63500671CE6 /* VC */,
 				C43E466F1D94C36100671CE6 /* AppDelegate.swift */,
-				C43E46711D94C36100671CE6 /* ViewController.swift */,
 				C43E46731D94C36100671CE6 /* Main.storyboard */,
+				C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */,
 				C43E46791D94C36100671CE6 /* Assets.xcassets */,
 				C43E467B1D94C36100671CE6 /* LaunchScreen.storyboard */,
 				C43E467E1D94C36100671CE6 /* Info.plist */,
 				C43E46761D94C36100671CE6 /* HunnyDue.xcdatamodeld */,
 			);
 			path = HunnyDue;
+			sourceTree = "<group>";
+		};
+		C43E46861D94C63500671CE6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C43E46711D94C36100671CE6 /* SignInViewController.swift */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D1E9A1D94D4840092B62A /* HunnyDueListViewController.swift in Sources */,
 				C43E46781D94C36100671CE6 /* HunnyDue.xcdatamodeld in Sources */,
-				C43E46721D94C36100671CE6 /* ViewController.swift in Sources */,
+				C43E46721D94C36100671CE6 /* SignInViewController.swift in Sources */,
 				C43E46701D94C36100671CE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +318,7 @@
 				C43E46831D94C36100671CE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

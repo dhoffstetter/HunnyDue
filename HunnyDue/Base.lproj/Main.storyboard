@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="HunnyDue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYE-Lj-zkk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EfK-yn-AAG"/>
+                                    <constraint firstAttribute="height" constant="30" id="iRs-7k-wQB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-MG-8Cy">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IXl-QK-m9k"/>
+                                    <constraint firstAttribute="width" constant="200" id="eBn-Wp-Yli"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUw-cC-b81">
+                                <state key="normal" title="What to do???"/>
+                                <connections>
+                                    <action selector="whatToDoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u1k-8I-MhF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HYE-Lj-zkk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="0jj-jY-0Rb"/>
+                            <constraint firstItem="tUw-cC-b81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6QA-ck-aXL"/>
+                            <constraint firstItem="tUw-cC-b81" firstAttribute="top" secondItem="aYJ-MG-8Cy" secondAttribute="bottom" constant="40" id="AwJ-dJ-px1"/>
+                            <constraint firstItem="HYE-Lj-zkk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cvc-6F-yOr"/>
+                            <constraint firstItem="aYJ-MG-8Cy" firstAttribute="top" secondItem="HYE-Lj-zkk" secondAttribute="bottom" constant="30" id="cK9-KD-0h2"/>
+                            <constraint firstItem="aYJ-MG-8Cy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kep-tC-fIh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="HYE-Lj-zkk" id="vzj-2M-mKi"/>
+                        <outlet property="passwordTextField" destination="aYJ-MG-8Cy" id="VUN-84-eHz"/>
+                        <segue destination="gCa-dP-U8t" kind="presentation" identifier="SignInToListSegue" id="Lqs-Ag-yf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Hunny Due List View Controller-->
+        <scene sceneID="F5E-B0-G4g">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gCa-dP-U8t" customClass="HunnyDueListViewController" customModule="HunnyDue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HdF-MO-Adx"/>
+                        <viewControllerLayoutGuide type="bottom" id="sxz-jG-Sf6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Dy-gA-bzL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bi4-Nb-Yuc">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HunnyDueCell" id="jAL-UJ-mbM">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jAL-UJ-mbM" id="0po-Ac-FH4">
+                                            <frame key="frameInset" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sxz-jG-Sf6" firstAttribute="top" secondItem="bi4-Nb-Yuc" secondAttribute="bottom" id="2hM-NT-vMC"/>
+                            <constraint firstItem="bi4-Nb-Yuc" firstAttribute="top" secondItem="HdF-MO-Adx" secondAttribute="bottom" id="6QD-7q-uGg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bi4-Nb-Yuc" secondAttribute="trailing" id="mhn-XI-8ft"/>
+                            <constraint firstItem="bi4-Nb-Yuc" firstAttribute="leading" secondItem="9Dy-gA-bzL" secondAttribute="leadingMargin" id="yiq-B9-NV5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hunnyDueListTableView" destination="bi4-Nb-Yuc" id="llt-WA-tgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSM-JM-QSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="137"/>
         </scene>
     </scenes>
 </document>
