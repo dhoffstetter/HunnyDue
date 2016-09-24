@@ -10,6 +10,11 @@ import UIKit
 
 class AddHunnyDueItemViewController: UIViewController {
 
+  @IBOutlet weak var shortDescriptionTextField: UITextField!
+  @IBOutlet weak var assignToTextField: UITextField!
+  @IBOutlet weak var dueDatePicker: UIDatePicker!
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +27,8 @@ class AddHunnyDueItemViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+  @IBAction func assignItButtonPressed(_ sender: AnyObject) {
+  }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

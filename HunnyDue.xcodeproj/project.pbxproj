@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C40D1E9A1D94D4840092B62A /* HunnyDueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */; };
+		C40D1E9F1D9622130092B62A /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D1E9E1D9622130092B62A /* ToDoItem.swift */; };
+		C40D1EA11D96272B0092B62A /* AddHunnyDueItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D1EA01D96272B0092B62A /* AddHunnyDueItemViewController.swift */; };
 		C43E46701D94C36100671CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E466F1D94C36100671CE6 /* AppDelegate.swift */; };
 		C43E46721D94C36100671CE6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43E46711D94C36100671CE6 /* SignInViewController.swift */; };
 		C43E46751D94C36100671CE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43E46731D94C36100671CE6 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HunnyDueListViewController.swift; sourceTree = "<group>"; };
+		C40D1E9E1D9622130092B62A /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		C40D1EA01D96272B0092B62A /* AddHunnyDueItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHunnyDueItemViewController.swift; sourceTree = "<group>"; };
 		C43E466C1D94C36100671CE6 /* HunnyDue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HunnyDue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43E466F1D94C36100671CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C43E46711D94C36100671CE6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40D1E9D1D96219E0092B62A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C40D1E9E1D9622130092B62A /* ToDoItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C43E46631D94C36100671CE6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +70,10 @@
 		C43E466E1D94C36100671CE6 /* HunnyDue */ = {
 			isa = PBXGroup;
 			children = (
+				C40D1E9D1D96219E0092B62A /* Model */,
 				C43E46861D94C63500671CE6 /* VC */,
 				C43E466F1D94C36100671CE6 /* AppDelegate.swift */,
 				C43E46731D94C36100671CE6 /* Main.storyboard */,
-				C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */,
 				C43E46791D94C36100671CE6 /* Assets.xcassets */,
 				C43E467B1D94C36100671CE6 /* LaunchScreen.storyboard */,
 				C43E467E1D94C36100671CE6 /* Info.plist */,
@@ -73,7 +85,9 @@
 		C43E46861D94C63500671CE6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				C40D1E991D94D4840092B62A /* HunnyDueListViewController.swift */,
 				C43E46711D94C36100671CE6 /* SignInViewController.swift */,
+				C40D1EA01D96272B0092B62A /* AddHunnyDueItemViewController.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -153,8 +167,10 @@
 			files = (
 				C40D1E9A1D94D4840092B62A /* HunnyDueListViewController.swift in Sources */,
 				C43E46781D94C36100671CE6 /* HunnyDue.xcdatamodeld in Sources */,
+				C40D1E9F1D9622130092B62A /* ToDoItem.swift in Sources */,
 				C43E46721D94C36100671CE6 /* SignInViewController.swift in Sources */,
 				C43E46701D94C36100671CE6 /* AppDelegate.swift in Sources */,
+				C40D1EA11D96272B0092B62A /* AddHunnyDueItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

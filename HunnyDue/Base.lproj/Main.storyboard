@@ -57,7 +57,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="HYE-Lj-zkk" id="vzj-2M-mKi"/>
                         <outlet property="passwordTextField" destination="aYJ-MG-8Cy" id="VUN-84-eHz"/>
-                        <segue destination="gCa-dP-U8t" kind="presentation" identifier="SignInToListSegue" id="Lqs-Ag-yf0"/>
+                        <segue destination="bsE-mS-Tz6" kind="presentation" identifier="SignInToListSegue" id="Lqs-Ag-yf0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,13 +98,132 @@
                             <constraint firstItem="bi4-Nb-Yuc" firstAttribute="leading" secondItem="9Dy-gA-bzL" secondAttribute="leadingMargin" id="yiq-B9-NV5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YPL-ZD-GR3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UFR-Yq-zI7">
+                            <connections>
+                                <segue destination="9ni-Zc-rk3" kind="show" id="qcN-vE-iSK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="hunnyDueListTableView" destination="bi4-Nb-Yuc" id="llt-WA-tgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSM-JM-QSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="137"/>
+            <point key="canvasLocation" x="1855.2" y="136.28185907046478"/>
+        </scene>
+        <!--Add Hunny Due Item View Controller-->
+        <scene sceneID="cPm-20-QqI">
+            <objects>
+                <viewController id="9ni-Zc-rk3" customClass="AddHunnyDueItemViewController" customModule="HunnyDue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fEi-N5-lbT"/>
+                        <viewControllerLayoutGuide type="bottom" id="2u9-L6-cwc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ARn-vA-YYA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zol-a4-FtA">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Short Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHa-lM-sqp">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NS2-zq-Lld"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who is the lucky person?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pqw-ba-Nit">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Dpe-fH-cVm"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="XGr-9L-yzq">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="C0z-hv-1cR"/>
+                                            <constraint firstAttribute="width" constant="300" id="tX1-gq-fKQ"/>
+                                        </constraints>
+                                        <date key="date" timeIntervalSinceReferenceDate="496381765.126131">
+                                            <!--2016-09-24 03:49:25 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a due date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSg-RZ-zJ7">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="t9l-pX-Uyk"/>
+                                            <constraint firstAttribute="height" constant="25" id="vQV-SO-OmB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9na-Qo-Jy2">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Mgy-t2-cGv"/>
+                                            <constraint firstAttribute="width" constant="65" id="r20-UO-XZ8"/>
+                                        </constraints>
+                                        <state key="normal" title="Assign It!"/>
+                                        <connections>
+                                            <action selector="assignItButtonPressed:" destination="9ni-Zc-rk3" eventType="touchUpInside" id="tzn-7k-ecX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Pqw-ba-Nit" secondAttribute="trailing" constant="10" id="8LX-8V-spx"/>
+                                    <constraint firstItem="zSg-RZ-zJ7" firstAttribute="leading" secondItem="Zol-a4-FtA" secondAttribute="leading" constant="10" id="IPd-kI-sug"/>
+                                    <constraint firstItem="Pqw-ba-Nit" firstAttribute="leading" secondItem="Zol-a4-FtA" secondAttribute="leading" constant="10" id="QtO-WL-i5g"/>
+                                    <constraint firstItem="9na-Qo-Jy2" firstAttribute="top" secondItem="XGr-9L-yzq" secondAttribute="bottom" constant="30" id="RaM-cB-HWf"/>
+                                    <constraint firstItem="hHa-lM-sqp" firstAttribute="top" secondItem="Zol-a4-FtA" secondAttribute="top" constant="50" id="Sgb-e5-OQR"/>
+                                    <constraint firstAttribute="trailing" secondItem="hHa-lM-sqp" secondAttribute="trailing" constant="10" id="TvB-LT-odW"/>
+                                    <constraint firstItem="Pqw-ba-Nit" firstAttribute="top" secondItem="hHa-lM-sqp" secondAttribute="bottom" constant="30" id="gMw-U6-iSk"/>
+                                    <constraint firstItem="zSg-RZ-zJ7" firstAttribute="top" secondItem="Pqw-ba-Nit" secondAttribute="bottom" constant="30" id="jVr-wa-B1J"/>
+                                    <constraint firstItem="XGr-9L-yzq" firstAttribute="leading" secondItem="Zol-a4-FtA" secondAttribute="leading" constant="10" id="kFe-YA-7Px"/>
+                                    <constraint firstItem="hHa-lM-sqp" firstAttribute="leading" secondItem="Zol-a4-FtA" secondAttribute="leading" constant="10" id="kVO-jq-eaz"/>
+                                    <constraint firstItem="XGr-9L-yzq" firstAttribute="top" secondItem="zSg-RZ-zJ7" secondAttribute="bottom" constant="10" id="rJp-O2-iYC"/>
+                                    <constraint firstItem="9na-Qo-Jy2" firstAttribute="leading" secondItem="Zol-a4-FtA" secondAttribute="leading" constant="20" id="srF-Sg-Rfs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zol-a4-FtA" firstAttribute="leading" secondItem="ARn-vA-YYA" secondAttribute="leading" id="3qZ-Sd-iqB"/>
+                            <constraint firstItem="Zol-a4-FtA" firstAttribute="top" secondItem="fEi-N5-lbT" secondAttribute="bottom" id="BTI-c6-PsS"/>
+                            <constraint firstAttribute="trailing" secondItem="Zol-a4-FtA" secondAttribute="trailing" id="Gx9-n7-qGd"/>
+                            <constraint firstItem="2u9-L6-cwc" firstAttribute="top" secondItem="Zol-a4-FtA" secondAttribute="bottom" id="tde-oZ-zrd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="assignToTextField" destination="Pqw-ba-Nit" id="6tz-PA-6hS"/>
+                        <outlet property="dueDatePicker" destination="XGr-9L-yzq" id="1qp-KE-AeP"/>
+                        <outlet property="shortDescriptionTextField" destination="hHa-lM-sqp" id="qCt-mc-RQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20l-Is-PY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="136.28185907046478"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0QL-KT-hkB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bsE-mS-Tz6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o1c-K3-GIB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gCa-dP-U8t" kind="relationship" relationship="rootViewController" id="Xfb-7Q-fbi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anY-7K-CUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>
