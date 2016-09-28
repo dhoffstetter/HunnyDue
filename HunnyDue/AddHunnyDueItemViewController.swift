@@ -11,7 +11,6 @@ import UIKit
 class AddHunnyDueItemViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
   @IBOutlet weak var shortDescriptionTextField: UITextField!
-  @IBOutlet weak var assignToTextField: UITextField!
   @IBOutlet weak var assignToPicker: UIPickerView!
   @IBOutlet weak var dueDatePicker: UIDatePicker!
   
@@ -58,6 +57,24 @@ class AddHunnyDueItemViewController: UIViewController, UIPickerViewDelegate, UIP
     
 
   @IBAction func assignItButtonPressed(_ sender: AnyObject) {
+    
+    let row = self.assignToPicker.selectedRow(inComponent: 0)
+    
+    print("Row \(row) and User \(users[row].name)")
+    
+    if ((shortDescriptionTextField.text == "") || (shortDescriptionTextField.text == nil) ) {
+      print("Need to enter text")
+      
+      let alert = UIAlertController(title: "Yo!", message: "You need to enter a task butthead!", preferredStyle: UIAlertControllerStyle.alert)
+      alert.addAction(UIAlertAction(title: "Oh, Okay!", style: UIAlertActionStyle.default, handler: nil))
+      self.present(alert, animated : true, completion: nil)
+      
+    } else {
+      print("You got it")
+    }
+    
+    let duedate = dueDatePicker.date
+    print(duedate)
   }
   
   // UIPicker
