@@ -171,6 +171,10 @@
                                             <action selector="assignItButtonPressed:" destination="9ni-Zc-rk3" eventType="touchUpInside" id="tzn-7k-ecX"/>
                                         </connections>
                                     </button>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="85F-rP-oto">
+                                        <frame key="frameInset" minY="406" height="92"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -198,6 +202,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="assignToPicker" destination="85F-rP-oto" id="L6S-Zb-N9T"/>
                         <outlet property="assignToTextField" destination="Pqw-ba-Nit" id="6tz-PA-6hS"/>
                         <outlet property="dueDatePicker" destination="XGr-9L-yzq" id="1qp-KE-AeP"/>
                         <outlet property="shortDescriptionTextField" destination="hHa-lM-sqp" id="qCt-mc-RQW"/>
